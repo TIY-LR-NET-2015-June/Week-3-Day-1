@@ -30,7 +30,8 @@ namespace Week3Day1Homework
         {
             remark = String.Join("", Enumerable.Range(65, 26)
                             .Select(a => new { A = (char)(a) })
-                            .OrderBy(x => Guid.NewGuid()).ToList());
+                            .OrderBy(x => Guid.NewGuid()).Select(x => x.A));
+
 
             Assert.AreEqual("Whoa, chill out!", bob.hey(remark));
         }
@@ -55,8 +56,8 @@ namespace Week3Day1Homework
         public void test_asking_gibberish()
         {
             remark = String.Join("", Enumerable.Range(97, 26)
-                           .Select(a => new { A = (char)(a) })
-                           .OrderBy(x => Guid.NewGuid()).ToList()) + "?";
+                            .Select(a => new { A = (char)(a) })
+                            .OrderBy(x => Guid.NewGuid()).Select(x => x.A)) + "?";
 
             Assert.AreEqual("Sure.", bob.hey(remark));
         }
