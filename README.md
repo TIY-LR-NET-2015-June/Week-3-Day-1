@@ -10,9 +10,7 @@
 ## Assignment: Bob
 
 Files:    
-
-* [bob.cs](bob.cs)
-* [bob_test.cs](bob_test.cz)
+* [bob_test.cs](bob_test.cs)
 
 Info:
 
